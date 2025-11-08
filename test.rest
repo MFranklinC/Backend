@@ -1,0 +1,6 @@
+### GET
+GET http://localhost:5000/books/all
+
+
+### GET All Students
+GET http://localhost:5000/students/all
