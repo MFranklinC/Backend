@@ -1,47 +1,59 @@
-### GET
-GET http://localhost:5000/books/all
+# ### GET
+# GET http://localhost:5000/books/all
 
 
-### Create New Book
-POST http://localhost:5000/books/new
+# ### Create New Book
+# POST http://localhost:5000/books/new
+# Content-Type: application/json
+
+# {
+#   "title": "Basta title",
+#   "genre": "Baka",
+#   "Status": "Available"
+# }   
+
+# ### Update Book
+# PUT http://localhost:5000/books/edit/5
+# Content-Type: application/json
+
+# {
+#   "title": "Kalapastangan",
+#   "genre": "siguro kanta siya?",
+#   "Status": "Available"
+# }
+
+
+# ### Delete Book
+# DELETE http://localhost:5000/books/delete/6
+# Content-Type: application/json
+
+# {
+#   "title": "Kalapastangan",
+#   "genre": "Ewan",
+#   "Status": "Available"
+# }
+
+# ### GET All Students
+# GET http://localhost:5000/students/all
+
+# ### Create New Student
+# POST http://localhost:5000/students/new
+# Content-Type: application/json
+
+# {
+#   "name": "Juan Dela Cruz",
+#   "course": "BSIT",
+#   "year": 2
+# }
+
+
+
+### GET New User
+GET http://localhost:5000/users/register
 Content-Type: application/json
 
 {
-  "title": "Basta title",
-  "genre": "Baka",
-  "Status": "Available"
-}   
-
-### Update Book
-PUT http://localhost:5000/books/edit/5
-Content-Type: application/json
-
-{
-  "title": "Kalapastangan",
-  "genre": "siguro kanta siya?",
-  "Status": "Available"
-}
-
-
-### Delete Book
-DELETE http://localhost:5000/books/delete/6
-Content-Type: application/json
-
-{
-  "title": "Kalapastangan",
-  "genre": "Ewan",
-  "Status": "Available"
-}
-
-### GET All Students
-GET http://localhost:5000/students/all
-
-### Create New Student
-POST http://localhost:5000/students/new
-Content-Type: application/json
-
-{
-  "name": "Juan Dela Cruz",
-  "course": "BSIT",
-  "year": 2
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "StrongPassword123!"
 }

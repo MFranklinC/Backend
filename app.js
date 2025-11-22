@@ -1,9 +1,10 @@
-import express from "express"; 
+import express from "express";
 import 'dotenv/config.js';
 import bookRoutes from "./routers/BookRoutes.js";
 import studentRoutes from "./routers/StudentRoutes.js";
+import userRoutes from "./routers/UserRoutes.js";
 import cors from "cors";
-import pool from "./config/db.js"; 
+import pool from "./config/db.js";
 const app = express();
 
 
@@ -13,6 +14,12 @@ let corsOptions = {
 
 app.use(express.json());
 app.use(cors(corsOptions));
+
+
+app.use((req, res, next) => {
+    console.log("Requested:", req.method, req.url);
+    next();
+});
 
 
 app.use((req, res, next) => {
@@ -42,3 +49,8 @@ try {
 
 app.use('/books', bookRoutes);
 app.use('/students', studentRoutes);
+app.use('/user', userRoutes);
+
+
+
+
